@@ -22,10 +22,10 @@ let search_area ='&l=';
 let page = '&startPage=';
 
 // options
-let skill = 'python';
+let skill = 'javascript';
 let location = 'Hackensack';
 
-let url = search + skill + search_area + location;
+let url = search + skill + search_area;
 
 
 module.exports = {
@@ -35,9 +35,9 @@ module.exports = {
 
 	let links = [];
 
-	for(var i = 0; i < 20; i++){
+	for(var i = 0; i < 10; i++){
 
-	    url = search + page + i;
+	    url = search + skill + page + i;
 	    x(url, '#search-results-control .complete-serp-result-div', [{
 		position: 'h3 a',
 		url: 'h3 a@href',
