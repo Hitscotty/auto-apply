@@ -1,0 +1,28 @@
+{
+  "name": "auto-apply",
+  "version": "1.0.0",
+  "description": "automates application process",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hitscotty/auto-apply.git"
+  },
+  "author": "Jonathan Portorreal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hitscotty/auto-apply/issues"
+  },
+  "homepage": "https://github.com/Hitscotty/auto-apply#readme",
+  "dependencies": {
+    "async": "^2.1.4",
+    "cheerio": "^0.22.0",
+    "nightmare": "^2.8.1",
+    "nightmare-real-mouse": "^1.0.0",
+    "q": "^1.4.1",
+    "request": "^2.79.0",
+    "x-ray": "^2.3.1"
+  }
+}
