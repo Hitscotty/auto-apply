@@ -1,7 +1,6 @@
 # auto-apply
-A tool to help you apply to jobs more quickly and efficiently. You select your skill and location and then the bot will have request
-you login into Dice.com after that it will begin apply to all "Easy Apply" Jobs with your resume(beta). This feature is glitchy
-so by default when you run the script it opens up 24 tabs of searched Jobs where you can just click apply and be done!
+A tool to help you apply to jobs more quickly and efficiently. You select your skill and location and then the bot will have
+you login into Dice.com after that it will begin apply to all "Easy Apply" Jobs with your resume(beta)(This feature is glitchy). By default when you run the script it opens up 24 tabs of searched Jobs where you can just click apply and be done!
 
 ![](easyapply.png)
 
