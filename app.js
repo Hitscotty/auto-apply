@@ -1,6 +1,6 @@
 const cheerio = require('cheerio');
 const Q = require('q');
-const getEasy = require('./get-easy');
+const getEasy = require('./scripts/get-easy');
 const async = require('async');
 // Automation Dependencies //
 const Nightmare = require('nightmare'), 
@@ -59,7 +59,7 @@ getEasyApplies();
  */
 function getEasyApplies(){ 
 
-    for(var i = 0; i < 50; i++){
+    for(var i = 0; i < 1; i++){
 	url =  search + skill + search_area  +  location +  page + i;
 
 	x(url, '#search-results-control .complete-serp-result-div', [{

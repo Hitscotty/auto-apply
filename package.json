@@ -4,7 +4,7 @@
   "description": "automates application process",
   "main": "app.js",
   "scripts": {
-    "start":"node app.js > links.txt && sh open-links.sh",
+    "start":"node app.js > scripts/links.txt && sh scripts/open-links.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
