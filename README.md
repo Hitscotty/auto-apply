@@ -3,6 +3,8 @@ A tool to help you apply to jobs more quickly and efficiently. You select your s
 you login into Dice.com after that it will begin apply to all "Easy Apply" Jobs with your resume(beta). This feature is glitchy
 so by default when you run the script it opens up 24 tabs of searched Jobs where you can just click apply and be done!
 
+![](easyapply.png)
+
 # start
 
 By defualt it will find the first 10 pages of javascript jobs near NY that are one-click apply's and open 24 of them 
