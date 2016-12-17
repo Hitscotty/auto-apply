@@ -24,8 +24,8 @@ let search_area ='&l=';
 let page = '&startPage=';
 
 // options
-let skill = 'javascript';
-let location = 'Hackensack'; 
+let skill = 'node.js';
+let location = 'NY'; 
 
 /********************************************************************/
 /* Some custom plugins just in case  */
@@ -47,7 +47,7 @@ var apply = exports.apply = (url) => {
     }
 }
 
-
+getEasyApplies();
 /********************************************************************/
 /********************************************************************/
 /*
@@ -59,8 +59,8 @@ var apply = exports.apply = (url) => {
  */
 function getEasyApplies(){ 
 
-    for(var i = 0; i < 2; i++){
-	url =  search + skill + page + i;
+    for(var i = 0; i < 50; i++){
+	url =  search + skill + search_area  +  location +  page + i;
 
 	x(url, '#search-results-control .complete-serp-result-div', [{
 	    position: 'h3 a',
@@ -71,10 +71,10 @@ function getEasyApplies(){
 
 	((err, obj) => {
 	    obj.forEach(function(x){
-		if(x.applytxt){
-		    console.log("true");
+		if(x.easyApply){
+		    console.log(x.url);
 		} 
-		//	x.easyApply ? clickable.push(x.url)  : null; 
+	//	x.easyApply ? {console.log(x.position); console.log(x.url);}  : null; 
 	    })
 	})
     }
@@ -104,7 +104,9 @@ function applyTo(link){
 
 }
 
-getEasy
+function start(){
+    
+    getEasy
     .getEasyApplies()
     .then((urls) => {
 	for(var i = 0; i < urls.length; i++){
@@ -112,21 +114,12 @@ getEasy
 	}
 	callback();
     });
-
+}
 
 /* String -> String */
 function prettyPrint(text){
     return text.replace(/[^\x20-\x7E]/gmi, "").replace(/  +/g, ' ');
 }
-
-function start(){
-    nightmare
-	.use(applyAll())
-	.evaluate()
-	.catch(function (error) {
-	    console.error('Search failed:', error);
-	});
-};
 
 function test(){
     nightmare

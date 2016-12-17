@@ -4,6 +4,7 @@
   "description": "automates application process",
   "main": "app.js",
   "scripts": {
+    "start":"node app.js > links.txt && sh open-links.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +24,7 @@
     "nightmare-real-mouse": "^1.0.0",
     "q": "^1.4.1",
     "request": "^2.79.0",
+    "start": "^4.0.2",
     "vo": "^4.0.2",
     "x-ray": "^2.3.1"
   }
