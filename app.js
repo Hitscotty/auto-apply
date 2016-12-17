@@ -27,8 +27,6 @@ let page = '&startPage=';
 let skill = 'javascript';
 let location = 'Hackensack'; 
 
-
-
 /********************************************************************/
 /* Some custom plugins just in case  */
 /********************************************************************/
@@ -61,10 +59,8 @@ var apply = exports.apply = (url) => {
  */
 function getEasyApplies(){ 
 
-
     for(var i = 0; i < 2; i++){
 	url =  search + skill + page + i;
-
 
 	x(url, '#search-results-control .complete-serp-result-div', [{
 	    position: 'h3 a',
@@ -74,16 +70,11 @@ function getEasyApplies(){
 	}])
 
 	((err, obj) => {
-	    //console.log(obj);
 	    obj.forEach(function(x){
 		if(x.applytxt){
 		    console.log("true");
 		} 
-		console.log(prettyPrint(x.applied) + "\n");
-		//console.log(prettyPrint(x.position));
-		//	console.log(prettyPrint(x.position));
 		//	x.easyApply ? clickable.push(x.url)  : null; 
-
 	    })
 	})
     }
@@ -116,25 +107,12 @@ function applyTo(link){
 getEasy
     .getEasyApplies()
     .then((urls) => {
-
-	for(var i = 1; i < urls.length; i++){
+	for(var i = 0; i < urls.length; i++){
 	    setTimeout(applyTo(urls[i]), 40000);
 	}
 	callback();
-	/*
-	async.eachSeries(res, function(link, callback){
-
-	    applyTo(link);
-	    callback();
-
-	}, function(err){	   
-	    if (err) throw err;
-	    console.log("done");
-	});*/
-
     });
 
-//getEasyApplies();
 
 /* String -> String */
 function prettyPrint(text){
@@ -142,7 +120,6 @@ function prettyPrint(text){
 }
 
 function start(){
-
     nightmare
 	.use(applyAll())
 	.evaluate()
@@ -152,7 +129,6 @@ function start(){
 };
 
 function test(){
-
     nightmare
 	.use(apply("https://www.dice.com/jobs/detail/OFSAA-Consultant-BuzzClan-LLC-Allendale-NJ-07401/90709156/809203?icid=sr2-1p&q=&l=Hackensack, NJ"))
 	.wait(3000)
@@ -160,7 +136,6 @@ function test(){
 	.catch(function(err){
 	    throw err;
 	})
-
 
 }
 

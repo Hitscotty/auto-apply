@@ -24,11 +24,11 @@ let page = '&startPage=';
 // options
 let skill = 'javascript';
 let location = 'Hackensack';
-
 let url = search + skill + search_area;
 
 
 module.exports = {
+
     getEasyApplies: () => {
 
 	let deferred = Q.defer();
@@ -48,8 +48,7 @@ module.exports = {
 		    x.easyApply ? links.push(x.url) : null;
 		})
 		deferred.resolve(links);
-	    }
-	    )
+	    })
 	}
 
 	return deferred.promise;
